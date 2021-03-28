@@ -1,5 +1,6 @@
 # Cordova-Intro-Video
-Plugin to play local video on iOS with filename intro.mp4
+Plugin to play local video on iOS with filename intro.mp4 on full screen without controls and show the app once video is finished.
+_for developers who build cordova apps on local Mac using Xcode_
 Note: Doesnt work with Phongap Build and Ionic App Flow
 
 # Installation
