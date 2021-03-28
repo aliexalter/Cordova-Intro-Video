@@ -48,4 +48,4 @@ use function
 # Enhancement (TODO)
 1. Need to copy video file from src or src/assests to iOS main app when cordova prepare runs.
 2. Need to attach file to Bundle Resources programmatically
-3. Pass name of file and extension as string to function collMethod to play fullscreen.
+3. Pass name of file and extension as string to function coolMethod to play fullscreen.
