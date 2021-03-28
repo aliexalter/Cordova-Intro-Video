@@ -1,0 +1,15 @@
+{
+  "name": "introvideo",
+  "version": "1.0.0",
+  "description": "Play small video on start of the app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "intro",
+    "video"
+  ],
+  "author": "Ali Subhani",
+  "license": "ISC"
+}
