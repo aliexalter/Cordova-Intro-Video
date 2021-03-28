@@ -37,15 +37,16 @@ import the service file in app-component.ts or any *.page.ts
 use function 
 `coolMethod()` to play video full screen on iOS.
 
-# Setup Video File (IMPORTANT) Read full steps please
+# Setup Video File Intro.mp4 (IMPORTANT) Read full steps please
 1. Add platform ios to the project by running 
 `ionic cordova plaform add ios`
 2. Run Command
 `ionic cordova prepare ios`
 3. Once iOS proejct is created inside platform folder. Open Workspace file in Xcode
-4. Now inside Xcode add New File as video intro.mp4 in the main App folder
-5. Open Build Phases > Copy Bundle Resources click add and chose Video file added to main folder of the app in previous step.
-6. Run the app on simulator. You will see video on the app page where coolMethod() function is called.
+4. Now inside Xcode add New File as video intro.mp4 in the main App folder.
+ - _If you add intro.mp4 to main ionic project folder it will be copied to platform/ios/www/intro.mp4_
+6. Open Build Phases > Copy Bundle Resources click add and chose Video file added to main folder of the app in previous step.
+7. Run the app on simulator. You will see video on the app page where coolMethod() function is called.
 
 # Enhancement (TODO)
 1. Need to copy video file from src or src/assests to iOS main app when cordova prepare runs.
