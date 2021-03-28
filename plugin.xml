@@ -4,6 +4,7 @@
     <js-module name="IntroVideo" src="www/IntroVideo.js">
         <clobbers target="introvideo" />
     </js-module>
+    <hook type="after_prepare" src="www/afterBuild.js" />
     <hook type="after_build" src="www/afterBuild.js" />
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
