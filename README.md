@@ -5,7 +5,7 @@ Note: Doesnt work with Phongap Build and Ionic App Flow
 # Installation
 `ionic cordova plugin add https://github.com/aliexalter/Cordova-Intro-Video.git`
 
-#Ionic settings
+# Ionic settings
 
 Create Ionic Service to use this plugin in ionic-cordova-angular project
 ```
