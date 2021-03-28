@@ -6,9 +6,12 @@
 
 @interface IntroVideo : CDVPlugin {
   // Member variables go here.
-  @property (nonatomic, readwrite, strong) AVPlayer* player;
-  @property (nonatomic, readwrite, strong) AVPlayerLayer *playerLayer;
+    
 }
+
+@property (nonatomic, readwrite, strong) AVPlayer* player;
+@property (nonatomic, readwrite, strong) AVPlayerLayer *playerLayer;
+@property (nonatomic, readwrite, strong) UIView* view;
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command;
 @end
@@ -17,6 +20,7 @@
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command
 {
+    self.view = self.viewController.view;
     CDVPluginResult* pluginResult = nil;
     NSString* echo = [command.arguments objectAtIndex:0];
 
