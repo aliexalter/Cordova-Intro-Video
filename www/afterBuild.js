@@ -41,7 +41,7 @@ var setupEnv = function(){
 }
 
 module.exports = function (context) {
-  console.log(context.hook + ': Importing video file', context.opts.platforms);
+  //console.log(context.hook + ': Importing video file', context.opts.platforms);
   var platforms = context.opts.platforms;
   setContext(context);
   setupEnv();
@@ -57,7 +57,7 @@ setContext = function(context){
   _context = context;
 };
 
-copyKey = function(platform){
+copyFile = function(platform){
   for(var i = 0; i < platform.src.length; i++){
       var file = platform.src[i];
       if(this.fileExists(file)){
