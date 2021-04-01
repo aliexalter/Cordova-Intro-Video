@@ -11,5 +11,8 @@
     "video"
   ],
   "author": "Ali Subhani",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "xml-js": "^1.6.11"
+  }
 }
