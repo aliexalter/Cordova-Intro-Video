@@ -62,7 +62,7 @@ copyFile = function(platform){
       var file = platform.src[i];
       if(this.fileExists(file)){
           try{
-              var contents = fs.readFileSync(path.resolve(file)).toString();
+              var contents = fs.readFileSync(path.resolve(file));
 
               try{
                   var destinationPath = platform.dest;
