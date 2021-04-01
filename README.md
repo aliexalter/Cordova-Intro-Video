@@ -44,7 +44,7 @@ use function
 `ionic cordova prepare ios`
 3. Once iOS proejct is created inside platform folder. Open Workspace file in Xcode
 4. Now inside Xcode add New File as video intro.mp4 in the main App folder.
- - _If you add intro.mp4 to main ionic project folder it will be copied to platform/ios/www/intro.mp4_
+ - _If you add intro.mp4 to main ionic project folder it will be copied to platform/ios/[app-name]/Resources/intro.mp4. You have to include it in project manually_
 6. Open Build Phases > Copy Bundle Resources click add and chose Video file added to main folder of the app in previous step.
 7. Run the app on simulator. You will see video on the app page where coolMethod() function is called.
 
