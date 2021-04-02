@@ -58,7 +58,7 @@ module.exports = function (context) {
 
       xcodeProject.addFile(path.resolve(destinationPath), hash, {});
 
-      //xcodeProject.addBuildPhase([path.resolve(destinationPath)]);
+      xcodeProject.addBuildPhase([path.resolve(destinationPath)],'PBXResourcesBuildPhase', 'Intro Video', xcodeProject.getFirstTarget().uuid, 'bundle').buildPhase;
 
       // Finally, write the .pbxproj back out to disk.
       fs.writeFileSync(path.resolve(xcodeProjectPath), xcodeProject.writeSync());
