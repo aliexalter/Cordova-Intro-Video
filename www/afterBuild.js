@@ -44,10 +44,27 @@ module.exports = function (context) {
 
     var xcodeProjectPath = getXcodeProjectPath();
     var xcodeProject = xcode.project(xcodeProjectPath);
+    //console.log(xcodeProject);
+    xcodeProject.parse(function (err){
 
-    var destinationPath = PLATFORM.IOS.dest;
-    //console.log(path.resolve(destinationPath));
-    xcodeProject.addFile(ppath.resolve(destinationPath));
+      var destinationPath = PLATFORM.IOS.dest;
+      var folder = destinationPath.substring(0, destinationPath.lastIndexOf('/'));
+      //console.log(path.resolve(destinationPath));
+
+      const groupName = 'Resources';
+      const [hash] = Object.entries(xcodeProject.hash.project.objects['PBXGroup']).find(
+        ([, group]) => group.name === groupName,
+      );
+
+      xcodeProject.addFile(path.resolve(destinationPath), hash, {});
+
+      //xcodeProject.addBuildPhase([path.resolve(destinationPath)]);
+
+      // Finally, write the .pbxproj back out to disk.
+      fs.writeFileSync(path.resolve(xcodeProjectPath), xcodeProject.writeSync());
+
+      //console.log(err);
+    });
   }
 }
 
