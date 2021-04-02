@@ -1,6 +1,6 @@
 {
   "name": "introvideo",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Play small video on start of the app",
   "main": "index.js",
   "scripts": {
