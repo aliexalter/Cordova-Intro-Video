@@ -13,6 +13,7 @@
   "author": "Ali Subhani",
   "license": "ISC",
   "dependencies": {
+    "xcode": "^3.0.1",
     "xml-js": "^1.6.11"
   }
 }

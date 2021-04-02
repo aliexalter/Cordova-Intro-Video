@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 var parser = require('xml-js');
+var xcode = require("xcode");
 
 var projectRoot
 var IOS_DIR = 'platforms/ios';
@@ -21,21 +22,13 @@ var setupEnv = function(){
         ]
     },
     /*ANDROID: {
-        dest: ANDROID_DIR + '/app/google-services.json',
+        dest: ANDROID_DIR + '/app/intro.mp4',
         src: [
-            'google-services.json',
-            ANDROID_DIR + '/assets/www/google-services.json',
-            'www/google-services.json',
-            ANDROID_DIR + '/app/src/main/google-services.json'
-        ],
-        colorsXml: {
-            src: './plugins/' + utilities.getPluginId() + '/src/android/colors.xml',
-            target: ANDROID_DIR + '/app/src/main/res/values/colors.xml'
-        },
-        performanceGradlePlugin: {
-            classDef: 'com.google.firebase:perf-plugin',
-            pluginDef: 'com.google.firebase.firebase-perf'
-        }
+            'intro.mp4',
+            ANDROID_DIR + '/assets/www/intro.mp4',
+            'www/intro.mp4',
+            ANDROID_DIR + '/app/src/main/intro.mp4'
+        ]
     }*/
   };
 }
