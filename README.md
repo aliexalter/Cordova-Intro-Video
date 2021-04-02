@@ -43,7 +43,9 @@ use function
 `ionic cordova plaform add ios`
 2. Run Command
 `ionic cordova prepare ios`
-3. Open Pltform/ios/you-app-name.Workspace file in Xcode
+`ionic cordova emulate ios --livereload --target=""`
+Target ccan be found from following command
+`ionic cordova emulate ios --list`
 
 # Enhancement (TODO)
 1. Pass name of file and extension as string to function coolMethod to play fullscreen.
