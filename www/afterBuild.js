@@ -41,6 +41,15 @@ module.exports = function (context) {
 
   if(platforms.indexOf('ios') !== -1 && directoryExists(IOS_DIR)){
     copyFile(PLATFORM.IOS);
+
+    var xcodeProjectPath = getXcodeProjectPath();
+    var xcodeProject = xcode.project(xcodeProjectPath);
+
+    var destinationPath = PLATFORM.IOS.dest;
+    var folder = destinationPath.substring(0, destinationPath.lastIndexOf('/'));
+    console.log(folder);
+    console.log(path.resolve(destinationPath)+'/intro.mp4');
+    //xcodeProject.addFile(path.resolve(destinationPath)+'/intro.mp4')
   }
 }
 
@@ -109,3 +118,27 @@ getPluginId = function(){
   // if(!_context) throw "Cannot retrieve plugin ID as hook context is not set";
   return _context.opts.plugin.id;
 };
+
+//Xcode 
+
+/**
+ * Used to get the path to the XCode project's .pbxproj file.
+ */
+getXcodeProjectPath = function () {
+  var appName = getAppName();
+  return path.join("platforms", "ios", appName + ".xcodeproj", "project.pbxproj");
+}
+
+/**
+* This helper is used to add a build phase to the XCode project 
+*/
+addBuildPhase = function (context, xcodeProjectPath) {
+
+  // Read and parse the XCode project (.pxbproj) from disk.
+  // File format information: http://www.monobjc.net/xcode-project-file-format.html
+  var xcodeProject = xcode.project(xcodeProjectPath);
+  xcodeProject.parseSync();
+
+  // Generate a unique ID for our new build phase.
+  var id = xcodeProject.generateUuid();
+}
