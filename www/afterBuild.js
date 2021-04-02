@@ -46,10 +46,8 @@ module.exports = function (context) {
     var xcodeProject = xcode.project(xcodeProjectPath);
 
     var destinationPath = PLATFORM.IOS.dest;
-    var folder = destinationPath.substring(0, destinationPath.lastIndexOf('/'));
-    console.log(folder);
-    console.log(path.resolve(destinationPath)+'/intro.mp4');
-    //xcodeProject.addFile(path.resolve(destinationPath)+'/intro.mp4')
+    //console.log(path.resolve(destinationPath));
+    xcodeProject.addFile(ppath.resolve(destinationPath));
   }
 }
 
